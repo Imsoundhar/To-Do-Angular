@@ -1,0 +1,31 @@
+<div class="center-right-container" [ngClass]="container">
+    <div id="task-info">
+        <div class="task-title">
+            <i id="categoryIcon" class={{selectedCategory.iconClass}} (click)="toggleSwitch()"></i>
+            <p>{{selectedCategory.name}}</p>
+            <p>...</p>
+            <div *ngIf="selectedCategory.id == 1" id="day">{{today | date:'EEEE, MMMM d'}}</div>
+        </div>
+    </div>
+    <div class="add-task-container">
+        <div class="add-task-input-container">
+            <div class="task-radio">
+                <i class="fa-regular fa-circle"></i>
+            </div>
+            <div class="task-input-container">
+                <input id="center-task-input" [(ngModel)]="taskName" type="text" placeholder="Add a task"
+                    (keyup.enter)="addTask()" />
+            </div>
+        </div>
+        <div class="add-task-feature-container">
+            <div class="add-task-feature">
+                <i class="fa-regular fa-calendar-days"></i>
+                <i class="fa-regular fa-bell"></i>
+                <i class="fa-solid fa-repeat"></i>
+            </div>
+            <button id="add-button" type="button" (keyup.enter)="addTask()">Add</button>
+        </div>
+    </div>
+    <app-task [inputTask]="inputTaskName"></app-task>
+</div>
+<app-task-detail></app-task-detail>

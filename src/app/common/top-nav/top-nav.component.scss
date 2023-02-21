@@ -1,0 +1,56 @@
+$color_1: white;
+$font-family_1: SegoeUI-SemiBold-final, Segoe UI Semibold, SegoeUI-Regular-final, Segoe UI, "Segoe UI Web (West European)", Segoe, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Tahoma, Helvetica, Arial, sans-serif;
+$background-color_1: rgb(26, 120, 221);
+$background-color_2: white;
+
+.top-container {
+	height: 48px;
+	background-color: $background-color_1;
+	.todo-link {
+		display: inline;
+		color: $color_1;
+		width: 16px;
+		height: 16px;
+		margin-left: 16px;
+		padding-top: 13px;
+		i {
+			width: 6px;
+			line-height: 48px;
+		}
+	}
+	.todo-title {
+		display: inline-block;
+		p {
+			font-family: $font-family_1;
+			color: $color_1;
+			width: 42px;
+			padding-left: 8px;
+			padding-right: 12px;
+			font-weight: 600;
+			line-height: 48px;
+			margin: 0;
+		}
+	}
+	.search-bar {
+		display: inline-block;
+		i {
+			width: 384px;
+			margin-left: 250px;
+			border-radius: 5px;
+			background-color: $background-color_2;
+			padding: 8px;
+			font-size: small;
+		}
+		width: 985px;
+	}
+	.basic-feature-icon {
+		display: inline-block;
+		width: 48px;
+		text-align: center;
+		i {
+			width: 16px;
+			color: $color_1;
+		}
+	}
+}
+

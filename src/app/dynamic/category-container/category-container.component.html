@@ -1,0 +1,10 @@
+<div class="left-side-content">
+    <ul id="user-list-un-order">
+        <li *ngFor="let category of categories" id={{category.id}} (click)="selectCategory(category)">
+            <div class="user-list">
+                <i class={{category.iconClass}}></i>
+                <p class="left-notes-title">{{category.name}}</p>
+            </div>
+        </li>
+    </ul>
+</div>

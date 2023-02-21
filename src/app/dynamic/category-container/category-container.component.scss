@@ -1,0 +1,24 @@
+.left-side-content {
+    width: 292px;
+    max-height: 400px;
+    overflow: auto;
+    div {
+        padding-left: 24px;
+        &:hover {
+            background-color: rgb(240, 240, 240);;
+        }
+    }
+    .user-list {
+        width: 268px;
+        height: 50px;
+        .left-notes-title {
+            display: inline-block;
+            margin-left: 16px;
+            margin-top: 12px;
+        }
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

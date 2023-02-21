@@ -1,0 +1,58 @@
+<div *ngIf="isVisible" class="task-detail-container">
+  <div class="detail-header">
+    <div class="detail-header-title-wrapper">
+      <div class="task-radio">
+        <i [ngClass]="selectedTask.isCompleted ? 'fa-sharp fa-solid fa-circle-check' :  'fa-regular fa-circle'"
+          (click)="markAsCompleted(selectedTask)"></i>
+      </div>
+      <div class="task-content">
+        <input type="text" [(ngModel)]="taskName" (keyup.enter)="updateTask()">
+      </div>
+      <div class="star-icon">
+        <i [ngClass]="selectedTask.isImportant ? 'fa-solid fa-star' : 'fa-regular fa-star'"
+          (click)="markAsImportant(selectedTask)"></i>
+      </div>
+    </div>
+    <div class="task-elaborate-features">
+      <div class="base-add-container">
+        <i class="fa-regular fa-circle"></i>
+        <input type="text" placeholder="Add step" />
+      </div>
+      <div class="add-to-my-day-container">
+        <i class="fa-solid fa-sun"></i>
+        <button>Add to My Day</button>
+      </div>
+      <div class="task-plan-container">
+        <i class="fa-regular fa-bell"></i>
+        <button>Remind me</button>
+      </div>
+      <div class="task-plan-container">
+        <i class="fa-regular fa-calendar"></i>
+        <button>Add due date</button>
+      </div>
+      <div class="task-plan-container">
+        <i class="fa-solid fa-repeat"></i>
+        <button>Repeat</button>
+      </div>
+      <div class="pick-category-container">
+        <i class="fa-solid fa-tag"></i>
+        <input type="text" placeholder="Pick a category"/>
+      </div>
+      <div class="add-to-my-day-container">
+        <i class="fa-solid fa-paperclip"></i>
+        <button>Add file</button>
+      </div>
+      <div class="add-note-container">
+        <input type="text" placeholder="Add a note" [(ngModel)]="userNotes" (blur)="updateTask()"/>
+        <p>Update few seconds ago</p>
+      </div>
+    </div>
+  </div>
+  <div class="task-detail-footer">
+    <button (click)="closeTaskDetail()">
+      <i class="fa-solid fa-right-to-bracket"></i>
+    </button>
+    <p>created today</p>
+    <i class="fa-regular fa-trash-can"></i>
+  </div>
+</div>

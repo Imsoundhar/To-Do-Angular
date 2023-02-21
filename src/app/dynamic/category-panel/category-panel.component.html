@@ -1,0 +1,36 @@
+<div *ngIf="isCategoryPanelVisible" class="left-container" id="left-container">
+  <div class="navigation-bar" (click)="toggleSwitch()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <app-category-container [categoryTitle]="categoryTitle"></app-category-container>
+  <div class="new-list-info">
+    <div class="new-list">
+      <i class="fa-solid fa-plus"></i>
+      <div class="add-new-list">
+        <input id="new-list-item" [(ngModel)]="userDefinedCategory" type="text" placeholder="New List"
+          (keyup.enter)="addCategory()"/>
+      </div>
+    </div>
+    <div class="new-list-icon">
+      <i class="fa-regular fa-square-plus"></i>
+    </div>
+  </div>
+  <div class="apps-container">
+    <div class="bottom-app">
+      <i class="fa-regular fa-envelope"></i>
+    </div>
+    <div class="bottom-app">
+      <i class="fa-regular fa-calendar"></i>
+    </div>
+    <div class="bottom-app">
+      <i class="fa-solid fa-user-group"></i>
+    </div>
+    <div class="bottom-app">
+      <i class="fa-solid fa-paperclip"></i>
+    </div>
+    <div class="bottom-app">
+      <i class="fa-solid fa-check"></i>
+    </div>
+  </div>
+</div>
+<app-category-details></app-category-details>

@@ -1,0 +1,154 @@
+$color_1: blue;
+$background-color_1: rgb(245, 245, 245);
+$background-color_2: white;
+$background-color_3: greenyellow;
+
+
+.center-right-container {
+	display: inline-block;
+	vertical-align: top;
+	background-color: $background-color_1;
+	height: 560px;
+	// width: 973px;
+	width: 77%;
+	#task-info {
+		padding: 20px 50px;
+		.task-title {
+			height: 41px;
+			line-height: 41px;
+			display: inline-block;
+			// width: 640px;
+			width: 75%;
+			p {
+				display: inline-block;
+				margin-left: 10px;
+			}
+		}
+		.task-feature {
+			display: inline-block;
+			height: 41px;
+			line-height: 41px;
+			.sort {
+				display: inline-block;
+			}
+			.suggestions {
+				display: inline-block;
+				margin-left: 50px;
+			}
+		}
+	}
+	.task-status-header {
+		padding: 20px 20px;
+		font-size: medium;
+		p {
+			padding-left: 10px;
+			display: inline-block;
+		}
+	}
+	#day {
+		height: 20px;
+		font-size: 12px;
+		opacity: 0.8;
+		// width: 640px;
+		width: 75%;
+	}
+	.add-task-container {
+		margin-left: 30px;
+		margin-right: 30px;
+		height: 97px;
+		// width: 900px;
+		width: 88%;
+		.add-task-input-container {
+			background-color: $background-color_2;
+			border-radius: 5px;
+			margin-top: 15px;
+			height: 52px;
+			// width: 900px;
+			width: 100%;
+			.task-radio {
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				line-height: 50px;
+				text-align: center;
+				opacity: 0.5;
+				font-size: medium;
+			}
+			.task-input-container {
+				display: inline-block;
+				width: 90%;
+				input {
+					padding: 0;
+					height: 50px;
+					border-style: hidden;
+					border-radius: 5px;
+					outline: none;
+					// width: 800px;
+					width: 100%;
+				}
+			}
+		}
+		.add-task-feature-container {
+			border-radius: 5px;
+			height: 45px;
+			line-height: 45px;
+			box-shadow: 0.1px 0.1px 1px gray;
+			width: 100%;
+			.add-task-feature {
+				display: inline-block;
+				// width: 820px;
+				width: 92%;
+			}
+			i {
+				display: inline-block;
+				margin-left: 15px;
+				opacity: 0.8;
+			}
+		}
+		#add-button {
+			display: inline-block;
+			background-color: $background-color_2;
+			width: 35px;
+			opacity: 0.5;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			font-size: 12px;
+			box-shadow: 0.1px 0.1px 0.1px 0.4px black;
+			&:active {
+				background-color: $background-color_3;
+			}
+		}
+	}
+}
+
+.center-container {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: $background-color_1;
+	height: 560px;
+	.user-task-info {
+		width: 80%;
+	}
+}
+
+.center-left-container {
+	width: 72%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: $background-color_1;
+	height: 560px;
+}
+
+.center-full-container {
+	display: inline-block;
+	vertical-align: top;
+	background-color: $background-color_1;
+	height: 560px;
+	// width: 1280px;
+	width: 100%;
+}
+.line-through {
+	text-decoration: line-through;
+}

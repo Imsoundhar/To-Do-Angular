@@ -1,0 +1,157 @@
+$background-color_1: rgb(240, 240, 240);
+$background-color_2: white;
+
+.task-detail-container {
+	// width: 375px;
+	width: 27.4%;
+	height: 560px;
+	display: inline-block;
+	background-color: $background-color_1;
+	vertical-align: top;
+	margin-left: -5px;
+	.detail-header {
+		padding: 15px;
+		.detail-header-title-wrapper {
+			width: 94.3%;
+			padding-left: 10px;
+			background-color: $background-color_2;
+			height: 50px;
+			line-height: 50px;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			.task-radio {
+                display: inline-block;
+				color: blue;
+            }
+			.task-content {
+				display: inline-block;
+				width: 83%;
+				input {
+					display: inline-block;
+					padding-left: 10px;
+					// width: 280px;
+					width: 92%;
+					// width: 260px;
+					height: 40px;
+				}
+			}
+            .star-icon {
+                display: inline-block;
+				color: blue;
+            }
+		}
+		.task-elaborate-features {
+			max-height: 430px;
+			overflow: auto;
+			.base-add-container {
+				padding-left: 10px;
+				background-color: $background-color_2;
+				height: 50px;
+				line-height: 50px;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				input {
+					display: inline-block;
+					padding-left: 10px;
+					// width: 280px;
+					width: 80%;
+					height: 30px;
+				}
+			}
+			.add-to-my-day-container {
+				padding-left: 10px;
+				margin-top: 10px;
+				margin-bottom: 5px;
+				background-color: $background-color_2;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 5px;
+				input {
+					padding-left: 10px;
+				}
+				&:hover {
+					background-color: $background-color_1;
+				}
+				button {
+					&:hover {
+						background-color: $background-color_1;
+					}
+					background-color: $background-color_2;
+					// width: 300px;
+					width: 80%;
+					height: 40px;
+					line-height: 40px;
+					text-align: left;
+					padding-left: 10px;
+				}
+			}
+			.task-plan-container {
+				padding-left: 10px;
+				background-color: $background-color_2;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 3px;
+				&:hover {
+					background-color: $background-color_1;
+				}
+				button {
+					&:hover {
+						background-color: $background-color_1;
+					}
+					background-color: $background-color_2;
+					// width: 300px;
+					width: 80%;
+					height: 40px;
+					line-height: 40px;
+					text-align: left;
+					padding-left: 10px;
+				}
+			}
+			.pick-category-container {
+				padding-left: 10px;
+				margin-top: 5px;
+				background-color: $background-color_2;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 5px;
+				input {
+					padding-left: 10px;
+				}
+				&:hover {
+					background-color: $background-color_1;
+				}
+			}
+			.add-note-container {
+				background-color: $background-color_2;
+				margin-top: 10px;
+				height: 80px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				padding: 16px;
+				input {
+					height: 50px;
+					line-height: 50px;
+				}
+				p {
+					font-size: small;
+					height: 30px;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+	.task-detail-footer {
+		height: 50px;
+		line-height: 50px;
+		margin: 0px 15px;
+		p {
+			display: inline-block;
+			// width: 290px;
+			width: 70%;
+			text-align: center;
+		}
+	}
+}
+.completed-text-strike {
+	text-decoration: line-through;
+}
