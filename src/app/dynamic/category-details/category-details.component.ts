@@ -18,7 +18,7 @@ export class CategoryDetailsComponent implements OnInit {
   date = moment().format('dddd, MMMM DD');
   isTaskDetailVisible!: boolean;
   isCategoryPanelVisible!: boolean;
-  today:number = Date.now();
+  today: number = Date.now();
 
   constructor(private interactionService: InteractionService,
     private toDoService: ToDoService) { }
@@ -58,28 +58,30 @@ export class CategoryDetailsComponent implements OnInit {
   }
 
   addTask() {
-    let categoryIds = [];
-    categoryIds.push(this.selectedCategory.id);
-    if (this.selectedCategory.id < 5) {
-      categoryIds.splice(0, 0, 5);
+    if (this.taskName != "") {
+      let categoryIds = [];
+      categoryIds.push(this.selectedCategory.id);
+      if (this.selectedCategory.id < 5) {
+        categoryIds.splice(0, 0, 5);
+      }
+      let importantStatus;
+      if (this.selectedCategory.id == 2) {
+        importantStatus = true;
+      } else {
+        importantStatus = false;
+      }
+      let task = {
+        id: 0,
+        name: this.taskName,
+        categoryIds: categoryIds,
+        note: "",
+        isCompleted: false,
+        isImportant: importantStatus
+      };
+      this.toDoService.addTask(task, "task");
+      this.inputTaskName = this.taskName;
+      this.taskName = "";
     }
-    let importantStatus;
-    if (this.selectedCategory.id == 2) {
-      importantStatus = true;
-    } else {
-      importantStatus = false;
-    }
-    let task = {
-      id: 0,
-      name: this.taskName,
-      categoryIds: categoryIds,
-      note: "",
-      isCompleted: false,
-      isImportant: importantStatus
-    };
-    this.toDoService.addTask(task, "task");
-    this.inputTaskName = this.taskName;
-    this.taskName = "";
   }
 
   toggleSwitch() {

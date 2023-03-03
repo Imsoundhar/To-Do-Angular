@@ -1,0 +1,24 @@
+<div class="home-page-container">
+    <div class="login-container">
+        <div class="login-text">
+            <i class="fa-brands fa-microsoft"></i>
+            <p>MicroSoft</p>
+        </div>
+        <div class="login-text">Sign in</div>
+        <div class="user-name-container">
+            <p> User Name </p>
+            <input type="text" [(ngModel)]="userName" placeholder="Enter user name" (keyup.enter)="login()"/>
+        </div>
+        <div class="password-container">
+            <p> PassWord </p>
+            <input type="password" [(ngModel)]="passWord" placeholder="Enter password" (keyup.enter)="login()"/>
+        </div>
+        <div class="submit-container" (click)="login()">
+            <p> Login </p>
+        </div>
+        <div class="submit-container" (click)="signUp()">
+            <p> Sign up </p>
+        </div>
+        <div class="error-message">{{message}}</div>
+    </div>
+</div>

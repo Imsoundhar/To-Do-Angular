@@ -1,3 +1,4 @@
+import { InteractionService } from 'src/app/interaction.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ToDo';
+
+  title:string = 'ToDo';
 }

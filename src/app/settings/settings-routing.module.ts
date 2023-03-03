@@ -1,3 +1,4 @@
+import { AuthGuard } from './../auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { GeneralComponent } from './general/general.component';
 import { NgModule } from '@angular/core';
@@ -7,6 +8,7 @@ import { SettingsComponent } from './settings/settings.component';
 const routes: Routes = [
   {
     path: 'settings',
+    canActivateChild: [AuthGuard],
     children: [
       {
         path: '', component: SettingsComponent,

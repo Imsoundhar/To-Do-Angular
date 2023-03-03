@@ -1,0 +1,33 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+
+import { LogInComponent } from './log-in.component';
+
+describe('LogInComponent', () => {
+  let component: LogInComponent;
+  let fixture: ComponentFixture<LogInComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+    // TestBed.configureTestingModule({
+      declarations: [LogInComponent],
+      imports: [FormsModule]
+    })
+      .compileComponents();
+
+    fixture = TestBed.createComponent(LogInComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should login', () => {
+    component.userName = '1';
+    component.passWord = '2';
+    component.login();
+    expect(component).toBeTruthy();
+  });
+});

@@ -21,8 +21,8 @@ export class SettingsComponent {
     { relativeTo: this.route });
   }
 
-  backButton() {
-    this.router.navigate([''], 
-    { relativeTo: this.route });
+  backToHomePage() {
+    this.router.navigate(['/todo'], 
+    { relativeTo: this.route });  
   }
 }

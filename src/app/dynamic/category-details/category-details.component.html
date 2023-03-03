@@ -1,7 +1,8 @@
 <div class="center-right-container" [ngClass]="container">
     <div id="task-info">
         <div class="task-title">
-            <i id="categoryIcon" class={{selectedCategory.iconClass}} (click)="toggleSwitch()"></i>
+            <i [ngClass]="isCategoryPanelVisible ? selectedCategory.iconClass : 'fa-solid fa-list'"
+                (click)="toggleSwitch()"></i>
             <p>{{selectedCategory.name}}</p>
             <p>...</p>
             <div *ngIf="selectedCategory.id == 1" id="day">{{today | date:'EEEE, MMMM d'}}</div>

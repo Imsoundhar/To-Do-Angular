@@ -13,29 +13,31 @@ export class CategoryPanelComponent {
   constructor(private toDoService: ToDoService,
     private interactionService: InteractionService) { }
 
-  categories : Category[] = [];
+  categories: Category[] = [];
   userDefinedCategory !: string;
   categoryTitle !: string;
   selectedCategory !: Category;
   isTaskDetailVisible !: boolean;
-  isCategoryPanelVisible:boolean = false; 
+  isCategoryPanelVisible: boolean = false;
 
   ngOnInit() {
     this.toggleSwitch();
-    this.interactionService.categoryPanelButton$.subscribe( categoryPanelButton => {
+    this.interactionService.categoryPanelButton$.subscribe(categoryPanelButton => {
       this.isCategoryPanelVisible = categoryPanelButton;
     });
   }
 
   addCategory() {
-    this.categoryTitle = this.userDefinedCategory;
-    let newUserDefinedCategory = {
-      id: 0,
-      name: this.categoryTitle,
-      iconClass: "fa-solid fa-list",
-    };
-    this.toDoService.addCategory(newUserDefinedCategory, "category");
-    this.userDefinedCategory = "";
+    if (this.userDefinedCategory != "") {
+      this.categoryTitle = this.userDefinedCategory;
+      let newUserDefinedCategory = {
+        id: 0,
+        name: this.categoryTitle,
+        iconClass: "fa-solid fa-list",
+      };
+      this.toDoService.addCategory(newUserDefinedCategory, "category");
+      this.userDefinedCategory = "";
+    }
   }
 
   toggleSwitch() {

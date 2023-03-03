@@ -1,14 +1,11 @@
-$color_1: white;
 $font-family_1: SegoeUI-SemiBold-final, Segoe UI Semibold, SegoeUI-Regular-final, Segoe UI, "Segoe UI Web (West European)", Segoe, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Tahoma, Helvetica, Arial, sans-serif;
-$background-color_1: rgb(26, 120, 221);
-$background-color_2: white;
 
 .top-container {
 	height: 48px;
-	background-color: $background-color_1;
+	background-color: rgb(37,100,207);
 	.todo-link {
 		display: inline;
-		color: $color_1;
+		color: white;
 		width: 16px;
 		height: 16px;
 		margin-left: 16px;
@@ -22,7 +19,7 @@ $background-color_2: white;
 		display: inline-block;
 		p {
 			font-family: $font-family_1;
-			color: $color_1;
+			color: white;
 			width: 42px;
 			padding-left: 8px;
 			padding-right: 12px;
@@ -37,7 +34,7 @@ $background-color_2: white;
 			width: 384px;
 			margin-left: 250px;
 			border-radius: 5px;
-			background-color: $background-color_2;
+			background-color: white;
 			padding: 8px;
 			font-size: small;
 		}
@@ -49,7 +46,7 @@ $background-color_2: white;
 		text-align: center;
 		i {
 			width: 16px;
-			color: $color_1;
+			color: white;
 		}
 	}
 }

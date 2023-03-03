@@ -1,0 +1,58 @@
+.home-page-container {
+    background-color: rgb(221, 227, 220);
+    height: 100vh;
+
+    .login-container {
+        display: inline-block;
+        margin-top: 3%;
+        margin-left: 40%;
+        margin-right: 27%;
+        background-color: white;
+        padding-left: 50px;
+        padding-right: 60px;
+
+        .login-text {
+            font-weight: 700;
+            font-size: x-large;
+            margin-top: 30px;
+            i {
+                color: blue;
+            }
+            p {
+                margin-left: 20px;
+                display: inline-block;
+            }
+        }
+
+        .user-name-container,
+        .password-container {
+            margin-top: 35px;
+
+            input {
+                margin-top: 25px;
+                border: none;
+                border-bottom: solid 1px;
+                width: 50px;
+                width: 300px;
+            }
+        }
+
+        .submit-container {
+            width: 100px;
+            height: 28px;
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 67%;
+            margin-bottom: 30px;
+            background-color: rgb(24,119,242);
+            border-radius: 5px;
+        }
+
+        .error-message {
+            margin-top: 20px;
+            color: red;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import { DynamicModule } from './../dynamic/dynamic.module';
 import { SettingsModule } from './../settings/settings.module';
 import { NgModule } from '@angular/core';
 import { TopNavComponent } from './top-nav/top-nav.component';
@@ -7,7 +8,8 @@ import { TopNavComponent } from './top-nav/top-nav.component';
     TopNavComponent
   ],
   imports: [
-    SettingsModule
+    SettingsModule,
+    DynamicModule,
   ],
   providers: [],
   exports: [
