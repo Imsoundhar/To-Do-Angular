@@ -1,6 +1,7 @@
 <div class="left-side-content">
     <ul id="user-list-un-order">
-        <li *ngFor="let category of categories" id={{category.id}} (click)="selectCategory(category)">
+        <li *ngFor="let category of categories" (click)="selectCategory(category)"
+            [ngClass]="{'highlighted-category' : selectedCategory.id == category.id}">
             <div class="user-list">
                 <i class={{category.iconClass}}></i>
                 <p class="left-notes-title">{{category.name}}</p>

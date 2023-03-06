@@ -6,13 +6,16 @@ $font-family_1: SegoeUI-SemiBold-final, Segoe UI Semibold, SegoeUI-Regular-final
 	.todo-link {
 		display: inline;
 		color: white;
-		width: 16px;
-		height: 16px;
-		margin-left: 16px;
-		padding-top: 13px;
+		padding-top: 14px;
+		padding-left: 13px;
+		padding-bottom: 13px;
+		padding-right: 13px;
+		padding-left: 16px;
 		i {
 			width: 6px;
-			line-height: 48px;
+		}
+		&:hover {
+			background-color:#005A9E;
 		}
 	}
 	.todo-title {
@@ -38,16 +41,20 @@ $font-family_1: SegoeUI-SemiBold-final, Segoe UI Semibold, SegoeUI-Regular-final
 			padding: 8px;
 			font-size: small;
 		}
-		width: 985px;
+		width: 76.4%;
 	}
 	.basic-feature-icon {
 		display: inline-block;
 		width: 48px;
+		line-height: 48px;
 		text-align: center;
 		i {
 			width: 16px;
 			color: white;
 		}
+	}
+	.basic-feature-icon:hover {
+		background-color:#005A9E;
 	}
 }
 

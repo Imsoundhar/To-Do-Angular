@@ -13,6 +13,7 @@ export class CategoryContainerComponent {
   categories: Category[] = [];
   constructor(private toDoService: ToDoService, private interactionService: InteractionService) { }
   @Input() categoryTitle!: string;
+  selectedCategory!: Category;
 
   selectCategory(data: Category): void {
     let category = {
@@ -31,6 +32,9 @@ export class CategoryContainerComponent {
       } else {
         this.interactionService.selectCategory(this.categories[this.categories.length - 1]);
       }
+    });
+    this.interactionService.chosenCategory$.subscribe( selectedCategory => {
+      this.selectedCategory = selectedCategory;
     });
   }  
 }
