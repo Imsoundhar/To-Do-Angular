@@ -18,7 +18,7 @@ export class LogInComponent {
     private authService: AuthService) { }
 
   login() {
-    let user = { id: 0, name: this.userName, passWord: this.passWord, }
+    let user = { id: 0, name: this.userName, passWord: this.passWord }
     if (user.name != undefined && user.passWord != undefined) {
       this.getVerifiedUser(user);
     } else {
