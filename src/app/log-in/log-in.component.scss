@@ -1,13 +1,14 @@
 .home-page-container {
     background-color: rgb(221, 227, 220);
-    
+    background-image: url('https://lh3.googleusercontent.com/proxy/U05R3-e1XfE5u9Lpu-aw2Fo5fDfxrpGSSnl8C4NGDJ0qisP-ffg9XOzVsuFIwj52JrNTgGdOv-G9BlY5qx-fGygb4t95IEL4');
+
     .login-container {
         display: inline-block;
         margin-top: 4%;
         margin-left: 40%;
-        margin-right: 27%;
         border-radius: 10px;
         background-color: white;
+        background-color: rgb(173, 216, 230);
         padding-left: 50px;
         padding-right: 60px;
         margin-bottom: 60px;
@@ -16,12 +17,31 @@
             font-weight: 700;
             font-size: x-large;
             margin-top: 30px;
+            // display: inline-block;
+
             i {
                 color: blue;
             }
+
             p {
                 margin-left: 20px;
                 display: inline-block;
+            }
+        }
+
+        .sign-in-text-container {
+
+            .sign-in-text {
+                font-weight: 700;
+                font-size: x-large;
+                margin-top: 30px;
+                display: inline-block;
+            }
+
+            .error-text {
+                display: inline-block;
+                color: red;
+                margin-left: 30px;
             }
         }
 
@@ -34,7 +54,7 @@
                 border: none;
                 border-bottom: solid 1px;
                 width: 50px;
-                width: 300px;
+                width: 380px;
             }
         }
 
@@ -45,15 +65,10 @@
             margin-top: 50px;
             margin-left: 67%;
             margin-bottom: 30px;
-            background-color: rgb(24,119,242);
+            background-color: rgb(24, 119, 242);
             border-radius: 5px;
         }
 
-        .error-message {
-            margin-top: 20px;
-            color: red;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+
     }
 }

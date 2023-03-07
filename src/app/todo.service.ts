@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Category } from './category';
 import { Task } from './task';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable(
   {providedIn: 'root'}
@@ -9,7 +10,9 @@ import { Task } from './task';
 export class ToDoService {
 
   apiDefaultUrl: string = "http://localhost:8080/todo/";
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    console.log("console log the environment variables : " + environment);
+   }
 
   addCategory(object: Category, url: string) {
     let httpHeaders = new HttpHeaders();

@@ -4,7 +4,10 @@
             <i class="fa-brands fa-microsoft"></i>
             <p>MicroSoft</p>
         </div>
-        <div class="login-text">Sign in</div>
+        <div class="sign-in-text-container">
+            <p class="sign-in-text"> Sign in</p>
+            <p class="error-text"> {{message}} </p>
+        </div>
         <div class="user-name-container">
             <p> User Name </p>
             <input type="text" [(ngModel)]="userName" placeholder="Enter user name" (keyup.enter)="login()" />
@@ -19,6 +22,5 @@
         <div class="submit-container" (click)="createAccount()">
             <p> Sign up </p>
         </div>
-        <div class="error-message">{{message}}</div>
     </div>
 </div>
